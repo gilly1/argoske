@@ -1,0 +1,7 @@
+Schema::create('{{table}}', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            {{schema_up}}            
+            $table->enum('is_approved', ['0', '1'])->nullable();
+            $table->softDeletes();
+            $table->timestamps();
+        });
